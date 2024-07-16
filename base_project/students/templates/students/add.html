@@ -1,0 +1,51 @@
+{% extends "students/base.html" %}
+
+{% block body %}
+<h3 class="text-center m-4">Add a student</h3>
+{% if success %}
+<div class="alert alert-dismissible alert-success m-3">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>The new student added successfully</strong>
+</div>
+<a class="btn btn-primary m-3" href="{% url 'index' %}">Go to homepage</a>
+<a class="btn btn-success m-3" href="{% url 'add' %}">Add another student</a>
+{% else %}
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="card mb-3">
+            <div class="card-header"><i class="ri-user-add-fill"></i> Student Registration</div>
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="student_number" class="form-label">Student Number</label>
+                        <input type="text" class="form-control" id="student_number" name="student_number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="field_of_study" class="form-label">Field of Study</label>
+                        <input type="text" class="form-control" id="field_of_study" name="field_of_study" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="gpa" class="form-label">GPA</label>
+                        <input type="text" class="form-control" id="gpa" name="gpa" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

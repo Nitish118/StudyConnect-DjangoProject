@@ -1,0 +1,101 @@
+
+body {
+    background: linear-gradient(135deg, #1a2b3c, #35495e);
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.navbar {
+    background: linear-gradient(135deg, #1a2b3c, #2e4053);
+    border-bottom: 2px solid #1a2b3c; /* Adding a subtle border for definition */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand, .nav-link, .btn-search {
+    color: #f5f5f5 !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #f5f5f5;
+}
+
+/* Search bar styling */
+.form-control {
+    background-color: #1a2b3c;
+    color: #f5f5f5;
+    border: none;
+}
+
+.form-control::placeholder {
+    color: #ffffff; /* Setting placeholder color to white */
+}
+
+.btn-search {
+    background-color: #2e4053;
+    border: 2px solid transparent; /* Transparent border */
+    color: #f5f5f5;
+    padding: 10px 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; /* Adding smooth transition */
+}
+
+.btn-search:hover {
+    background-color: #405570;
+    border-color: #ffffff; /* White border on hover */
+}
+
+/* Card styling */
+.card {
+    background-color: #22313f;
+    color: #f5f5f5;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.card-header {
+    background-color: #31455a;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #2e4053;
+}
+
+.table thead th {
+    border-bottom: 2px solid #405570;
+}
+
+.table tbody td {
+    border-top: none;
+}
+
+/* Buttons */
+.btn {
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; /* Adding transitions */
+    outline: none; /* Remove default outline */
+}
+
+.btn-add, .btn-action, .btn-danger {
+    background-color: #2e4053;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid transparent; /* Transparent border */
+    border-radius: 5px;
+}
+
+.btn-add:hover, .btn-action:hover, .btn-danger:hover {
+    background-color: #405570;
+    border-color: #ffffff; /* White border on hover */
+    transform: scale(1.05);
+}
